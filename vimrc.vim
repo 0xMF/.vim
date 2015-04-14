@@ -245,6 +245,8 @@ filetype plugin indent on    " required for vundle
 
     "* SH files
     au FileType sh    :setlocal fileformat=unix
+    "* OKSH files
+    au BufNewFile,BufRead .okshrc*,*.oksh :call SetFileTypeSH("sh")
 
     "*  Squirrel
     : au BufNewFile,BufRead *.nut setlocal ft=squirrel
